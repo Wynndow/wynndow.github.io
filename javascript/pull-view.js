@@ -35,7 +35,8 @@
         this.$el.addClass("thumbsup");
       }
 
-      if (this.model.get('user').login === 'kevinkeenoy') {
+      var isItKev = this.model.get('user').login;
+      if (isItKev === 'kevinkeenoy' || isItKev === 'TheDoubleK') {
         this.$el.addClass("sparkle");
       }
 
