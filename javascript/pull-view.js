@@ -35,6 +35,10 @@
         this.$el.addClass("thumbsup");
       }
 
+      if (this.model.get('user').login === 'kevinkeenoy') {
+        this.$el.addClass("sparkle");
+      }
+
       if (this.model.info.get('mergeable') === false){
         var statusString = '<p class="status not-mergeable">No auto merge</p>';
       } else if (this.model.status.get('state')){
