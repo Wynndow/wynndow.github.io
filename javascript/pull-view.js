@@ -38,6 +38,14 @@
       var isItKev = this.model.get('user').login;
       if (isItKev === 'kevinkeenoy' || isItKev === 'TheDoubleK') {
         this.$el.addClass("sparkle");
+
+      if (FourthWall.wipHandling == 'small') {
+        for (var i=0; i < FourthWall.wipStrings.length; i++) {
+          if (this.model.get('title').indexOf(FourthWall.wipStrings[i]) >= 0) {
+            this.$el.addClass("wip");
+            break;
+          }
+        }
       }
 
       if (this.model.info.get('mergeable') === false){
